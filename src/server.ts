@@ -19,7 +19,7 @@ import config from './config';
 import { prisma } from './lib/prisma';
 
 let server: Server;
-
+console.log("DATABASE_URL:", process.env.DATABASE_URL);
 async function main() {
   try {
     // Prisma connects automatically on first query, but we can explicitly connect
