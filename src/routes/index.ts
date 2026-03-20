@@ -1,5 +1,9 @@
 import { Router } from "express";
 import { AuthRoutes } from "../modules/Auth/auth.route";
+import { UserRoutes } from "../modules/User/user.route";
+import { CarRoutes } from "../modules/Car/car.route";
+import { RentRoutes } from "../modules/Rent/rent.route";
+import { BidRoutes } from "../modules/Bid/bid.route";
 
 type TModuleRoutes = {
   path: string;
@@ -9,26 +13,26 @@ type TModuleRoutes = {
 const router = Router();
 
 const moduleRoutes: TModuleRoutes[] = [
-  //   {
-  //     path: '/users',
-  //     route: UserRoutes,
-  //   },
-  //   {
-  //     path: '/cars',
-  //     route: CarRoutes,
-  //   },
-  //   {
-  //     path: '/bids',
-  //     route: BidRoutes,
-  //   },
+  {
+    path: "/users",
+    route: UserRoutes,
+  },
+  {
+    path: "/cars",
+    route: CarRoutes,
+  },
+  {
+    path: "/bids",
+    route: BidRoutes,
+  },
   {
     path: "/auth",
     route: AuthRoutes,
   },
-  //   {
-  //     path: '/rents',
-  //     route: RentRoutes,
-  //   },
+  {
+    path: "/rents",
+    route: RentRoutes,
+  },
   //   {
   //     path: '/payments',
   //     route: PaymentRoutes,
