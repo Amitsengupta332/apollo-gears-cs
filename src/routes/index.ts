@@ -4,6 +4,7 @@ import { UserRoutes } from "../modules/User/user.route";
 import { CarRoutes } from "../modules/Car/car.route";
 import { RentRoutes } from "../modules/Rent/rent.route";
 import { BidRoutes } from "../modules/Bid/bid.route";
+import { PaymentRoutes } from "../modules/Payment/payment.route";
 
 type TModuleRoutes = {
   path: string;
@@ -33,10 +34,10 @@ const moduleRoutes: TModuleRoutes[] = [
     path: "/rents",
     route: RentRoutes,
   },
-  //   {
-  //     path: '/payments',
-  //     route: PaymentRoutes,
-  //   },
+    {
+      path: '/payments',
+      route: PaymentRoutes,
+    },
 ];
 
 moduleRoutes.forEach((route) => router.use(route.path, route.route));
